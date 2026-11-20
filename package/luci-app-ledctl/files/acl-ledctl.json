@@ -1,0 +1,32 @@
+{
+	"luci-app-ledctl": {
+		"description": "LED 控制：总开关、分组开关、亮度与自动熄灭",
+		"read": {
+			"ubus": {
+				"ledctl": [
+					"status"
+				]
+			},
+			"uci": [
+				"system"
+			]
+		},
+		"write": {
+			"ubus": {
+				"ledctl": [
+					"set_all",
+					"set_group",
+					"set_brightness",
+					"set_timeout",
+					"wake",
+					"sleep",
+					"set_power_link",
+					"reset_brightness"
+				]
+			},
+			"uci": [
+				"system"
+			]
+		}
+	}
+}
